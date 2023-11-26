@@ -26,8 +26,8 @@ namespace WindowsFormsApp1
            
             textoTelegrama = txtTelegrama.Text;
             
-            if (cbUrgente.Checked)
-                tipoTelegrama = 'u';
+            if (rbOrdinario.Checked)
+                tipoTelegrama = 'o';
             
             numPalabras = textoTelegrama.Length;
           
@@ -36,9 +36,16 @@ namespace WindowsFormsApp1
                     coste = 5;
                 else
                     coste = 0.5 * numPalabras;
-            else
-           
-            if (tipoTelegrama == 'u')
+
+
+            if (rbUrgente.Checked)
+
+                tipoTelegrama = 'u';
+
+            numPalabras = textoTelegrama.Length;
+
+              if(tipoTelegrama == 'u')
+
                 if (numPalabras <= 10)
                     coste = 25;
                 else
