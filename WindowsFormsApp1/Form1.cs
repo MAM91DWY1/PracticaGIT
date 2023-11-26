@@ -33,18 +33,18 @@ namespace WindowsFormsApp1
           
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 5;
                 else
                     coste = 0.5 * numPalabras;
             else
            
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
-                    coste = 5;
+                    coste = 25;
                 else
-                    coste = 5 + 0.75 * (numPalabras - 10);
+                    coste = 25 + 0.75 * (numPalabras + 10);
             else
-                coste = 0;
+                coste = 0.5 * numPalabras;
             txtPrecio.Text = coste.ToString() + " euros";
         }
     }
